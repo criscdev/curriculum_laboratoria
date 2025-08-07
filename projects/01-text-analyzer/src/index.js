@@ -1,13 +1,13 @@
 import analyzer from './analyzer.js';
 
-// Seleciona o textarea pelo atributo name
+// Selects the textarea by the name attribute
 const textInput = document.querySelector('textarea[name="user-input"]');
-// Seleciona o botão pelo id permitido
+// Selects the button by the allowed id
 const clearButton = document.getElementById('reset-button');
-// Seleciona todos os <li> das métricas
+// Selects all <li> elements for metrics
 const metricsList = document.querySelectorAll('ul > li');
 
-// Função para atualizar as métricas nos <li>
+// Function to update metrics in <li> elements
 function updateResults(text) {
   const results = [
     `words: ${analyzer.getWordCount(text)}`,
