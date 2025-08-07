@@ -16,7 +16,7 @@ const analyzer = {
     const words = text.trim().split(/\s+/).filter(w => w);
     if (words.length === 0) return 0;
     const totalLength = words.reduce((sum, w) => sum + w.length, 0);
-    return (totalLength / words.length).toFixed(2);
+    return parseFloat((totalLength / words.length).toFixed(2));
   },
   getNumberCount: (text) => {
     if (!text) return 0;
