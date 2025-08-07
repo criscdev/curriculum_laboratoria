@@ -9,7 +9,7 @@ const analyzer = {
   },
   getCharacterCountExcludingSpaces: (text) => {
     if (!text) return 0;
-    return text.replace(/\s/g, '').length;
+    return text.replace(/[\s\p{P}]/gu, '').length;
   },
   getAverageWordLength: (text) => {
     if (!text) return 0;
